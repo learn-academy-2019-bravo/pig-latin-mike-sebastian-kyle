@@ -27,10 +27,10 @@
 // begin OG code (non Regex)
 var userinput = "This is a test"
 var newArr = userinput.split(" ")
-var finalTrans = ""
-var finalArr = newArr.map(quCheck(value))
+//var finalTrans = finalArr.tostring(" ");
+var finalArr = newArr.map(quCheck)
 console.log(finalArr);
-//console.log(quCheck());
+console.log(finalArr.join(" "));
 function quCheck(string){
     if(string.charAt(0) === "a" || string.charAt(0) === "e" || string.charAt(0) === "i" || string.charAt(0) === "u" || string.charAt(0) === "A" || string.charAt(0) === "E" || string.charAt(0) === "I" || string.charAt(0) === "O " || string.charAt(0) === "U"){
         return `${string}way`
