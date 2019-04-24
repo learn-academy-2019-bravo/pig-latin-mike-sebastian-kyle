@@ -25,12 +25,19 @@
 //     })
 // })
 // begin OG code (non Regex)
-var userinput = "This is a test"
-var newArr = userinput.split(" ")
-//var finalTrans = finalArr.tostring(" ");
-var finalArr = newArr.map(quCheck)
-console.log(finalArr);
-console.log(finalArr.join(" "));
+function btnPress(){
+    console.log("function ran");
+    let userinput = document.getElementById("user-input").value
+    var newArr = userinput.split(" ")
+    var finalArr = newArr.map(quCheck)
+    console.log(finalArr);
+    var finalTrans = finalArr.join(' ')
+    console.log(finalTrans);
+    document.getElementById('final-pig-latin').innerHTML = finalTrans
+    document.getElementById('output-div').style = "display: show"
+}
+
+
 function quCheck(string){
     if(string.charAt(0) === "a" || string.charAt(0) === "e" || string.charAt(0) === "i" || string.charAt(0) === "u" || string.charAt(0) === "A" || string.charAt(0) === "E" || string.charAt(0) === "I" || string.charAt(0) === "O " || string.charAt(0) === "U"){
         return `${string}way`
@@ -50,7 +57,7 @@ function quCheck(string){
                 return string.slice(i, string.length) + pigword + 'ay'
             }
         }
-    }return "parametes not met"
+    }return "please insert text"
 }
         //
 //end Og code

@@ -1,0 +1,29 @@
+#title-description {
+  width: 40%;
+  float: left;
+}
+#rules {
+  font-size: 18px
+}
+
+#input {
+
+}
+#user-input {
+  width: 40%;
+}
+
+#inner-face {
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+
+#final-pig-latin {
+  text-align: center;
+}
+#output-div {
+  border-style: solid;
+  margin-top: 20px;
+  width: 35%;
+}
