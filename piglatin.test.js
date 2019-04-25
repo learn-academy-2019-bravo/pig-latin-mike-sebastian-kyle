@@ -42,7 +42,7 @@ function btnPress(){
 
 function quCheck(string){
     //if string is empty, return 'please enter text'
-    if(string === ""){
+    if(""){
         return "please enter text"
     }
     //if the string begins with a number, return the number
@@ -63,7 +63,7 @@ function quCheck(string){
                 return string.slice(string.search("qu")+2, string.length) + `${string.slice(0, string.search("qu")+2)}ay`
             }
         //if the first letter is a consonant...
-    } else if (string.charAt(0) != "a" && string.charAt(0) != "e" && string.charAt(0) != "i" && string.charAt(0) != "u" && string.charAt(0) != "A" && string.charAt(0) != "E" && string.charAt(0) != "I" && string.charAt(0) != "O " && string.charAt(0) != "U"){
+    } else if (string.charAt(0) != "a" && string.charAt(0) != "e" && string.charAt(0) != "i" && string.charAt(0) != "u" && string.charAt(0) != "A" && string.charAt(0) != "E" && string.charAt(0) != "I" && string.charAt(0) != "O " && string.charAt(0) != "U" && string !== ""){
 // iterates through word and finds where initial cluster of consonants ends
         for (let i=0; i < string.length; i++){
             if (string.charAt(i) != "a" && string.charAt(i) != "e" && string.charAt(i) != "i" && string.charAt(i) != "u" && string.charAt(i) != "o" && string.charAt(i) != "A" && string.charAt(i) != "E" && string.charAt(i) != "I" && string.charAt(i) != "O" && string.charAt(i) != "U"){
@@ -72,8 +72,8 @@ function quCheck(string){
                 let pigword = string.slice(0 , i)
                 return string.slice(i, string.length) + pigword + 'ay'
             }
-        }
-
+        }// if string has no vowels, returns string cluster up to "y".
+        return string.slice(string.search("y"), string.length) + string.slice(0,string.search("y")) +"ay"
     }
 }
         //
